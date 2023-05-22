@@ -70,3 +70,5 @@ function plugInDeactivate(): void
     $wpdb->query("DROP TABLE IF EXISTS " . getTableName());
 }
 register_deactivation_hook(__FILE__, 'plugInDeactivate');
+
+include plugin_dir_path(__FILE__) . "cososys-plugin-page.php";
