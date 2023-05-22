@@ -1,0 +1,76 @@
+@import "post.css";
+
+.wrapper {
+    width: 1140px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.wrapper h1 {
+    text-align: center;
+}
+
+.divider {
+    margin: 5rem 0;
+}
+
+.wrapper ol {
+    display: flex;
+    flex-direction: column;
+    max-width: 98%;
+    border: 1px solid #eee;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    margin: 0;
+    padding: 1rem;
+}
+
+.wrapper li {
+    color: #4F4F4F;
+    padding-left: 16px;
+    margin: 24px auto;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.wrapper li:before {
+    content: '';
+    display: block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: -12px;
+    left: -36px;
+}
+
+.wrapper li:nth-child(odd):before {
+    border-color: #0BAD02;
+}
+
+.wrapper li:nth-child(even):before {
+    border-color: #2378D5;
+}
+
+.wrapper li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #6E6E6E;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.wrapper li:hover::after {
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+

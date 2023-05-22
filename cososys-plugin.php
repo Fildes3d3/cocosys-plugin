@@ -32,7 +32,7 @@ function plugInActivate(): void
     global $wpdb;
 
     $sql = "
-        CREATE TABLE " . getTableName() ." 
+        CREATE TABLE IF NOT EXISTS " . getTableName() ." 
         (
             id INT AUTO_INCREMENT NOT NULL,
             content LONGTEXT NOT NULL,
@@ -69,4 +69,4 @@ function plugInDeactivate(): void
 
     $wpdb->query("DROP TABLE IF EXISTS " . getTableName());
 }
-register_deactivation_hook(__FILE__, 'testPluginDeactivate');
+register_deactivation_hook(__FILE__, 'plugInDeactivate');
