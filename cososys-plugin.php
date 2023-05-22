@@ -72,3 +72,4 @@ function plugInDeactivate(): void
 register_deactivation_hook(__FILE__, 'plugInDeactivate');
 
 include plugin_dir_path(__FILE__) . "cososys-plugin-page.php";
+include plugin_dir_path(__FILE__) . "cososys-plugin-ajax.php";
